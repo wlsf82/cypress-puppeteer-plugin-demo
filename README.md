@@ -1,5 +1,7 @@
 # cypress-puppeteer-plugin-demo
 
+[![CI](https://github.com/wlsf82/cypress-puppeteer-plugin-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/wlsf82/cypress-puppeteer-plugin-demo/actions)
+
 Sample project to demonstrate the usage of the [`@cypress/puppeteer [beta]`](https://github.com/cypress-io/cypress/tree/develop/npm/puppeteer) plugin.
 
 ## Pre-requirements
