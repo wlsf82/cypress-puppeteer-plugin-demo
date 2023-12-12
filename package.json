@@ -1,0 +1,21 @@
+{
+  "name": "cypress-puppeteer-plugin-demo",
+  "version": "1.0.0",
+  "description": "Sample project to demonstrate the usage of the @cypress/puppeteer [beta] plugin.",
+  "main": "cypress.config.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test": "cypress run --browser chrome"
+  },
+  "keywords": [
+    "cypress",
+    "puppeteer",
+    "@cypress/puppeteer"
+  ],
+  "author": "Walmyr <wlsf82@gmail.com> (https://walmyr.dev/)",
+  "license": "MIT",
+  "devDependencies": {
+    "@cypress/puppeteer": "^0.1.1",
+    "cypress": "^13.6.1"
+  }
+}
