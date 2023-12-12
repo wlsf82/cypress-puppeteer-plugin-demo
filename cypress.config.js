@@ -7,7 +7,11 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       puppeteerSetup(on)
 
-      return config
+      return {
+        browsers: config.browsers.filter(browser => {
+          return browser.family === 'chromium' && browser.name !== 'electron'
+        })
+      }
     },
   },
   fixturesFolder: false,
