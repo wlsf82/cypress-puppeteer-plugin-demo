@@ -1,6 +1,6 @@
 const { defineConfig } = require('cypress')
 
-const puppeteerSetup = require('./cypress/support/puppeteer/index')
+const puppeteerSetup = require('./cypress/support/puppeteer')
 
 module.exports = defineConfig({
   e2e: {
