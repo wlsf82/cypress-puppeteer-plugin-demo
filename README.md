@@ -20,8 +20,6 @@ Run `npm test` (or `npm t` for the short version) to run the tests in headless m
 
 Or, run `npm run cy:open` to open the Cypress App and run the tests in interactive mode.
 
-> **Note:** In interactive mode, **use the Chrome browser**.
-
 ## Support this project
 
 If you want to support this project, leave a ⭐.
