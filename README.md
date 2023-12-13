@@ -1,6 +1,7 @@
 # cypress-puppeteer-plugin-demo
 
 [![CI](https://github.com/wlsf82/cypress-puppeteer-plugin-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/wlsf82/cypress-puppeteer-plugin-demo/actions)
+[![cypress-puppeteer-plugin-demo](https://img.shields.io/endpoint?url=https://cloud.cypress.io/badge/simple/u8w8pa&style=flat&logo=cypress)](https://cloud.cypress.io/projects/u8w8pa/runs)
 
 Sample project to demonstrate the usage of the [`@cypress/puppeteer [beta]`](https://github.com/cypress-io/cypress/tree/develop/npm/puppeteer) plugin.
 
