@@ -11,4 +11,6 @@ jobs:
       - name: Cypress tests
         uses: cypress-io/github-action@v6
         with:
-          command: npm test
+          command: npm run test:cloud
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}

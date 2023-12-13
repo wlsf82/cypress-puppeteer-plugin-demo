@@ -5,7 +5,8 @@
   "main": "cypress.config.js",
   "scripts": {
     "cy:open": "cypress open",
-    "test": "cypress run --browser chrome"
+    "test": "cypress run --browser chrome",
+    "test:cloud": "cypress run --record --browser chrome"
   },
   "keywords": [
     "cypress",
