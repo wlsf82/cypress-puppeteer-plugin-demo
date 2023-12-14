@@ -5,5 +5,8 @@ describe('Login', () => {
     cy.contains('a', 'Login').click()
 
     cy.puppeteer('switchToTabAndLogin')
+
+    cy.contains('p', "You're now logged in!")
+      .should('be.visible')
   })
 })
