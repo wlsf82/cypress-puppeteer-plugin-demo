@@ -5,14 +5,7 @@ module.exports = function puppeteerSetup(on) {
     on,
     onMessage: {
       async switchToTabAndGetContent (browser) {
-        const page = await retry(async () => {
-          const pages = await browser.pages()
-          const page = pages.find(page => page.url().includes('walmyr.dev'))
-
-          if (!page) throw new Error('Could not find page')
-
-          return page
-        })
+        const page = await retryPage(browser, 'walmyr.dev')
 
         await page.bringToFront()
 
@@ -26,14 +19,7 @@ module.exports = function puppeteerSetup(on) {
         return headingTwoText
       },
       async switchToTabAndLogin (browser) {
-        const page = await retry(async () => {
-          const pages = await browser.pages()
-          const page = pages.find(page => page.url().includes('login.html'))
-
-          if (!page) throw new Error('Could not find page')
-
-          return page
-        })
+        const page = await retryPage(browser, 'login.html')
 
         await page.bringToFront()
 
@@ -42,4 +28,17 @@ module.exports = function puppeteerSetup(on) {
       },
     },
   })
+}
+
+async function retryPage(browser, url) {
+  const page = await retry(async () => {
+    const pages = await browser.pages()
+    const page = pages.find(page => page.url().includes(url))
+
+    if (!page) throw new Error('Could not find page')
+
+    return page
+  })
+
+  return page
 }
