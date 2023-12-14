@@ -1,6 +1,7 @@
 const { defineConfig } = require('cypress')
 
 const puppeteerSetup = require('./cypress/support/puppeteer')
+const { getChromiumWebBrowsers } = require('./cypress/support/utils')
 
 module.exports = defineConfig({
   projectId: 'u8w8pa',
@@ -8,11 +9,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       puppeteerSetup(on)
 
-      return {
-        browsers: config.browsers.filter(browser => {
-          return browser.family === 'chromium' && browser.name !== 'electron'
-        })
-      }
+      return getChromiumWebBrowsers(config)
     },
   },
   fixturesFolder: false,
