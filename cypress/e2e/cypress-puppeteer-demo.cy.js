@@ -4,7 +4,7 @@ describe('@cypress/puppeteer demo', () => {
 
     cy.contains('a', 'https://walmyr.dev').click()
 
-    cy.puppeteer('switchToTabAndGetContent')
+    cy.puppeteer('switchTabAndGetContent')
       .should('equal', "Here's a brief of my history")
   })
 })

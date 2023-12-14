@@ -4,7 +4,7 @@ module.exports = function puppeteerSetup(on) {
   setup({
     on,
     onMessage: {
-      async switchToTabAndGetContent (browser) {
+      async switchTabAndGetContent (browser) {
         const page = await retryPage(browser, 'walmyr.dev')
 
         await page.bringToFront()
@@ -18,7 +18,7 @@ module.exports = function puppeteerSetup(on) {
 
         return headingTwoText
       },
-      async switchToTabAndLogin (browser) {
+      async switchTabAndLogin (browser) {
         const page = await retryPage(browser, 'login.html')
 
         await page.bringToFront()
