@@ -9,7 +9,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       puppeteerSetup(on)
 
-      return getChromiumWebBrowsers(config)
+      // return getChromiumWebBrowsers(config)
     },
   },
   fixturesFolder: false,

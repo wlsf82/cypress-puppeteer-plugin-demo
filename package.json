@@ -6,7 +6,7 @@
   "scripts": {
     "cy:open": "cypress open",
     "test": "cypress run --browser chrome",
-    "test:cloud": "cypress run --record --browser chrome"
+    "test:cloud": "cypress run --record --browser electron"
   },
   "keywords": [
     "cypress",
