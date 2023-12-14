@@ -5,7 +5,7 @@ module.exports = function puppeteerSetup(on) {
     on,
     onMessage: {
       async switchTabAndGetContent (browser) {
-        const page = await retryPage(browser, 'walmyr.dev')
+        const page = await pageRetrier(browser, 'walmyr.dev')
 
         await page.bringToFront()
 
@@ -19,7 +19,7 @@ module.exports = function puppeteerSetup(on) {
         return headingTwoText
       },
       async switchTabAndLogin (browser) {
-        const page = await retryPage(browser, 'login.html')
+        const page = await pageRetrier(browser, 'login.html')
 
         await page.bringToFront()
 
@@ -30,7 +30,7 @@ module.exports = function puppeteerSetup(on) {
   })
 }
 
-async function retryPage(browser, url) {
+async function pageRetrier(browser, url) {
   const page = await retry(async () => {
     const pages = await browser.pages()
     const page = pages.find(page => page.url().includes(url))
