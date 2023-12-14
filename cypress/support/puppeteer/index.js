@@ -24,6 +24,7 @@ module.exports = function puppeteerSetup(on) {
         await page.bringToFront()
 
         const loginButton = await page.waitForSelector('button')
+
         return loginButton.click()
       },
     },
